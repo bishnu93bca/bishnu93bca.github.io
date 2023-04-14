@@ -1,0 +1,606 @@
+ /*Bootstrap Theme 0 - FULL VIDEO,      http://lorempixel.com/400/200/sports*/
+/*smoke white*/
+/*General Rules*/
+html,body{
+	height: 100%;
+}
+body{ 
+/*font-family: 'Macondo Swash Caps', cursive;*/
+font-family: 'Raleway', sans-serif;
+font-size: 100%;
+line-height: 1.5em;
+}
+/*navbar*/
+.navbar{
+	border: 0;
+	padding: 10px 0;
+	transition: all 1s ease-in-out;
+	background: transparent;
+}
+.transparent{
+	background:rgba(0,0,0,0.7);
+}
+nav a{
+	color: white!important;
+	font-size: 16px;
+
+}
+nav a:hover{
+	color: #F15025!important;
+
+}
+.active a{
+	background: none!important;
+	color: #F15025!important;
+}
+.navbar-brand{
+	font-size: 30px;
+	font-style: italic;
+	color: #F15025!important;
+}
+.navbar-toggle{
+	color: white;
+	font-size: 20px;
+	border-color: white!important;
+
+}
+.navbar-toggle:hover, .nvabar-toggle:focus{
+	background-color: white!important;
+	color: #F15025;
+}
+.navbar-collapse{
+	border-color: #F15025!important;
+	max-height: none!important;
+
+}
+.
+
+
+
+
+/*header*/
+.header h1{
+	text-transform: uppercase;;
+	font-size: 40px;
+	margin-bottom: 5px;
+}
+.header-underline{
+	width: 150px;
+	border: 3px solid #F15025;
+	margin: 0 auto 20px auto;
+}
+.header p{
+	font-size: 16px;
+	padding: 0 30px;
+}
+/*font awesome underline*/
+.font-awesome-underline{
+	width: 150px;
+	border: 3px solid #F15025;
+	margin: 20px auto 30px auto;
+}
+.font-awesome-underline:after{
+	content:"\f133";
+	font-family: "FontAwesome";
+	font-size: 40px;
+	color: #F15025;
+	position: relative;
+	top: -10px;
+	background: white;
+	padding: 0 10px;
+}
+
+/*banner Section*/
+#banner{
+	height: 100%;
+	background: url('../img/background-banner.jpg') fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+#banner-content{
+	height: 100%;
+	width: 100%;
+	display: table;
+}
+#banner-box{
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+#banner-box h1{
+	margin: 0!important;
+	font-size: 80px;
+	font-weight: 400;
+	text-transform: uppercase;
+	color: black;
+}
+#banner-underline{
+	width: 300px;
+	border: 3px solid #F15025;
+	margin: 0 auto;
+}
+#banner-box a{
+	font-size: 30px;
+	border: 2px solid whitesmoke;
+	display: inline-block;
+	padding: 15px 20px !important;
+	margin-top: 20px;
+	color: whitesmoke;
+	text-decoration: none;
+}
+#banner-box a:hover,
+#banner-box a:focus{
+	color: #F15025;
+	background-color: whitesmoke;
+}
+#banner-icon a{
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-size: 30px;
+	color: white;
+	border: 2px solid whitesmoke;
+	border-radius: 50%;
+	padding: 5px;
+}
+#banner-icon a:hover{
+	opacity: 1.6;
+	color: black;
+	border-color: black;
+}
+
+#services{
+	background-color: #CED0CE;
+	padding: 40px;
+}
+.services-container .fa{
+	font-size: 100px;
+	color: #F15025;
+}
+#services h2{
+	margin: 10px auto 20px auto;
+
+}
+.services-container p{
+	font-size: 16px;
+	line-height: 1.5em;
+}
+.services-container{
+	padding: 20px 40px;
+}
+
+/*promise section*/
+.promise-picture{
+	height: 600px;
+	background: url("../img/promise-pic.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-top: 600px solid transparent;
+	border-right: 150px solid whitesmoke;
+
+}
+.promise-text{
+	height: 600px;
+	background-color: whitesmoke;
+	padding: 40px 20px;
+}
+.promise-icons p{
+	font-size: 20px;
+	line-height: 1.2em;
+}
+#promise .fa{
+	color: #F15025;
+	font-size: 40px;
+}
+/*end of promise section*/
+/*skills Section*/
+#skills {
+color: whitesmoke;
+background-color: black;
+padding: 40px 40px;
+}
+#skills .col-sm-6{
+	padding: 0 40px;
+}
+#skills .progress{
+	border-radius: 0;
+	background-color: #CEDOCE;
+
+
+}
+/*end of skills section */
+/* start jumbotron*/
+.jumbotron{
+	margin-bottom: 0!important;
+	padding: 40px;
+	background-color: #F15025;
+
+}
+.jumbo h1{
+	margin-top: 0;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	line-height: 2em;
+}
+.jumbo a{
+	font-size: 30px;
+	border: 2px solid whitesmoke;
+	display: inline-block;
+	padding: 15px 20px;
+	margin-top: 40px;
+	color: whitesmoke;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.jumbo a:hover{
+	color: #F15025;
+	background-color:whitesmoke;
+}
+/*end of jumbotron*/
+/*work section*/
+#work {
+	background-color: #CED0CE;
+}
+#work .header{
+	padding: 40px;
+}
+#work .col-sm-6 {
+	padding-left: 0;
+	padding-right: 0;
+
+}
+#work .img-box{
+	overflow: hidden;
+}
+#work img{
+	transition: transform 4s ease-in-out;
+}
+#work img:hover{
+	transform: scale(1.3);
+}
+/*end work section*/
+/*team section*/
+#team{
+	border-top: 6px solid #F15025;
+	padding: 40px;
+	background-color: whitesmoke;
+}
+#team img{
+	background-color: #F15025;
+}
+#team .fa{
+	font-size: 40px;
+	margin-right: 10px;
+	color: #F15025;
+}
+#team .col-sm-6 {
+	margin: 40px 0;	
+}
+/*end of team section*/
+/*numbers section */
+#numbers{
+	padding: 40px;
+	background: url('../img/annplace.jpg') fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: whitesmoke;
+
+}
+#numbers .fa{
+	font-size: 40px;
+	color: #F15025;
+}
+#numbers .col-xs-4{
+	padding-top: 10px;
+}
+/*end of numbers section*/
+/*price section*/
+#pricing{
+	padding: 40px;
+	background-color: #CED0CE;
+}
+#pricing .col-sm-6{
+	padding-top: 20px;
+}
+#pricing .panel{
+	border-color:#F15025;
+	border: 1px solid #F15025;
+	background-color: white;
+  	box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+#pricing .panel-heading{
+	background-color: #F15025;
+}
+#pricing .panel-heading h3{
+	font-size: 40px;
+	text-transform: uppercase; 
+	padding-bottom:5px; 
+}
+#pricing .title{
+	margin: 10px 0 20px 0;
+}
+#pricing .title h1{
+	font-size: 60px;
+}
+#pricing ul {
+	list-style-type:none;
+	padding: 0!important; 
+}
+#pricing ul li{
+	font-size: 24px;
+	line-height: 1.5em;
+}
+#pricing .panel-footer{
+	color: whitesmoke;
+	padding: 5px;
+	background-color: black;
+	font-size: 16px;
+}
+#pricing .panel-footer a{
+	font-size: 20px;
+	color: #F15025;
+	border-color: #F15025;
+}
+#pricing .panel-footer a:hover{
+	background-color:whitesmoke; 
+}
+#pricing hr{
+	width: 60%;
+	margin: 10px auto;
+	border: 1px solid #F15025!important;
+}
+/*end of prices section*/
+/*goals section*/
+#goals{
+	padding:20px 10px;
+	background-color:#2D3142;
+	color: whitesmoke; 
+
+}
+#goals .font-awesome-underline:after{
+	
+	background-color: #2D3142;
+	
+}
+#goals .fa{
+	float: left;
+	font-size: 60px;
+	color: #F15025;
+	border-right: 3px solid #F15025;
+	padding-right:10px; 
+}
+.goals-title *{
+	margin-top: 0;
+}
+.goals-title{
+	margin-left: 80px;
+}
+#goals p{
+	font-size: 20px;
+	padding: 10px;
+	line-height: 1.5em;
+
+}
+#goals .col-sm-6{
+	padding:20px;
+	margin: 10px 0;
+}
+#goals .col-sm-6:hover{
+	background-color:#353531;
+	border-radius: 15px;
+	color: #CED0CE; 
+}
+#goals .col-sm-6:before{
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 40px;
+	height: 40px;
+}
+#goals .col-sm-6:before{
+	border-top: solid 20px #2D3142;
+	border-right: solid 20px #2D3142;
+	border-left: solid 20px #F15025;
+	border-bottom: solid 20px #F15025;
+}
+/*end of goals section*/
+/*portfolio section*/
+#portfolio{
+	background-color: whitesmoke;
+	padding-top: 20px;
+	border-bottom: 6px solid #F15025;
+}
+#portfolio .font-awesome-underline:after{
+background-color: whitesmoke;
+}
+#portfolio .col-md-3{
+	padding:0;
+}
+
+.portfolio-background{
+	background: rgba(0,0,0,0.7);
+}
+.portfolio-thumb{
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+}
+#portfolio img{
+	width: 100%;
+	height: 100%;
+}
+.portfolio-overlay{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	visibility: hidden;
+}
+.portfolio-overlay h2{
+margin:0;
+font-size: 60px;
+color: #F15025;
+}
+.portfolio-thumb:hover{
+	opacity: 0.5;
+}
+.portfolio-thumb:hover .portfolio-overlay{
+visibility: visible;
+}
+/*end of portfolio section*/
+
+/*clients section*/
+#clients{
+	padding: 60px 40px;
+	background-color: whitesmoke;
+
+}
+#clients img{
+	width: 200px;
+	
+}
+#clients .font-awesome-underline:after{
+	background-color: whitesmoke;
+}
+#clients .header{
+	padding-bottom: 20px;
+}
+/*end clients section*/
+/*work-carousel section*/
+#work-carousel{
+	background-color: #CED0CE;
+}
+#work-carousel .font-awesome-underline:after{
+	background-color: #CED0CE;
+}
+#work-carousel .header{
+	padding-bottom: 20px;
+}
+/*end of work-scarousel section*/
+/*quotes section*/
+#quotes{
+	color: whitesmoke;
+	background: url('../img/humanface.jpg') fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+#quotes .header{
+	padding-bottom: 20px;
+}
+.quotes-background{
+	background: rgba(0,0,0,0.5);
+}
+#quotes .font-awesome-underline:after{
+	background: url(''../img/humanface.jpg'');
+}
+#quotes .header{
+	padding-bottom: 20px;
+}#quotes .container{
+	padding:40px 20px;
+}
+#quotes img{
+	width: 200px;
+	background-color: #F15025;
+}
+#quotes blockquote{
+	border-left: 0;
+	line-height: 2;
+	font-size: 19px;
+}
+#quotes blockquote footer{
+	color: red;
+	font-size: 16px;
+
+}
+#quotes .fa{
+	color: #F15025;
+	font-size: 40px;
+	margin: 0,10px;
+}
+
+
+/*end of quotes section*/
+
+/*contact section*/
+#contact{
+	background-color: #F15025;
+	color: whitesmoke;
+	padding: 40px 0;
+}
+#contact .font-awesome-underline{
+	width: 150px;
+	border: 3px solid #F15025;
+	margin: 20px auto 30px auto;
+
+}
+#contact .font-awesome-underline:after{
+	background-color: #F15025;
+}
+#contact .font-awesome-underline:after{
+	color: black;
+}
+#contact .header{
+	padding-bottom: 20px;
+}
+#contact .form-control{
+	border-radius: 0;
+	font-size: 20px;
+}
+#contact button{
+	background-color: #353531;
+	font-size: 24px;
+	color: #F15025;
+	margin-bottom: 20px;
+}
+#contact button:hover{
+	background-color: #CFD0CE;
+	color: #353531;
+}
+#contact .col-sm-6:not(.iframe){
+	padding-left: 5px;
+	padding-right: 5px;
+}
+#contact .col-sm-12{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+/*end of contact section*/
+/*footer section*/
+#footer{
+	padding: 20px 40px;
+	color: whitesmoke;
+	background-color: #353531;
+}
+#footer .font-awesome-underline:after{
+	background-color: #353531;
+}
+#footer .footer-icons{
+	font-size: 60px;
+	padding-top: 30px;
+
+}
+#footer .footer-icons a{
+	color: #F15025;
+	text-decoration:none;
+
+}
+#footer .footer-icons a:hover{
+	color: deepskyblue;
+}
+#footer .copyrights h3{
+	padding: 40px 0 ;
+	color: #CED0CE;
+}
+
+
+/*end of footer section*/
