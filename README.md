@@ -4,7 +4,7 @@ This is the source code and content for my personal GitHub Pages website:
 👉 [bishnu93bca.github.io](https://bishnu93bca.github.io/)
 
 ## 🔍 About Me
-Hi, I'm Bishnu Ray — a web developer passionate about Laravel, JavaScript, ethical hacking, and open-source contributions.
+Hi, I'm Bishnu Ray — a web developer passionate about Laravel, JavaScript, and open-source contributions.
 
 ## 📁 Contents
 - 🖥️ My Projects
@@ -17,8 +17,8 @@ Visit my website here:
 ➡️ [https://bishnu93bca.github.io](https://bishnu93bca.github.io)
 
 ## 📬 Contact
-- Email: your-email@example.com
-- LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
+- Email: bishnu99bca.com
+- LinkedIn: [bishnuray](https://linkedin.com/in/bishnuray)
 - GitHub: [@bishnu93bca](https://github.com/bishnu93bca)
 
 ---
