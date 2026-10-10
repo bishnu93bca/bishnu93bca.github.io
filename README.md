@@ -18,7 +18,7 @@ index.html              Page markup, SEO metadata and inline SVG icons
 404.html                "Page not found" page
 assets/css/style.css    All styles (light and dark themes)
 assets/js/main.js       Theme toggle, navigation, scroll effects, contact form, network animation
-assets/images/          Favicon, profile placeholder, social preview image, project thumbnails
+assets/images/          Favicon, profile photo, social preview image, project thumbnails
 .github/workflows/      GitHub Pages deployment
 ```
 
@@ -26,7 +26,7 @@ assets/images/          Favicon, profile placeholder, social preview image, proj
 
 Search `index.html` for `EDIT:` comments. They mark the placeholders to fill in:
 
-- **Profile photo:** add your photo as `assets/images/profile.jpg` (square, about 800×800) and change the three `assets/images/profile.svg` references in `index.html` to it.
+- **Profile photo:** replace `assets/images/profile.jpg` with a new square photo (about 480×480) to update it everywhere.
 - **Experience:** company name, dates and location; copy the `<li>` to add more roles.
 - **Education and certifications.**
 - **Project links:** replace the GitHub profile links with each project's repository URL.
