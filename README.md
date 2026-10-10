@@ -17,7 +17,7 @@ Visit my website here:
 ➡️ [https://bishnu93bca.github.io](https://bishnu93bca.github.io)
 
 ## 📬 Contact
-- Email: bishnu99bca.com
+- Email: bishnu99bca@gmail.com
 - LinkedIn: [bishnuray](https://linkedin.com/in/bishnuray)
 - GitHub: [@bishnu93bca](https://github.com/bishnu93bca)
 
