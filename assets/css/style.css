@@ -225,9 +225,13 @@ ul, ol { list-style: none; }
   box-shadow: 0 12px 28px -10px rgba(0, 10, 30, .55); animation: bob 6s ease-in-out infinite;
 }
 .float-badge i { width: 10px; height: 10px; border-radius: 50%; background: var(--c); box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 25%, transparent); }
-.fb1 { top: 8%; left: -10%; }
-.fb2 { top: 46%; right: -14%; animation-delay: -2s; }
-.fb3 { bottom: 4%; left: 2%; animation-delay: -4s; }
+/* Six badges spaced around the portrait; staggered delays so they bob out of sync. */
+.fb1 { top: -2%; left: 4%; }
+.fb2 { top: 4%; right: -6%; animation-delay: -1s; }
+.fb3 { top: 44%; right: -18%; animation-delay: -2s; }
+.fb4 { bottom: 6%; right: -8%; animation-delay: -3s; }
+.fb5 { bottom: -2%; left: 2%; animation-delay: -4s; }
+.fb6 { top: 42%; left: -20%; animation-delay: -5s; }
 
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
@@ -243,11 +247,13 @@ ul, ol { list-style: none; }
   .hero-grid { grid-template-columns: 1fr; gap: 56px; }
   .hero-visual { order: -1; }
   .portrait { width: min(240px, 62vw); }
-  .fb1 { left: -18%; } .fb2 { right: -22%; }
+  .float-badge { font-size: .78rem; padding: 6px 11px; gap: 6px; }
+  .fb3 { right: -30%; } .fb6 { left: -30%; }
 }
 @media (max-width: 480px) {
-  .float-badge { font-size: .75rem; padding: 6px 10px; }
-  .fb1 { left: -12%; } .fb2 { right: -16%; }
+  .float-badge { font-size: .72rem; padding: 5px 9px; }
+  .float-badge i { width: 8px; height: 8px; }
+  .fb1 { left: -6%; } .fb2 { right: -12%; } .fb3 { right: -26%; } .fb4 { right: -14%; } .fb5 { left: -6%; } .fb6 { left: -26%; }
 }
 
 /* ---------- Sections ---------- */
@@ -348,18 +354,23 @@ section { padding: 88px 0; }
   .skills-grid > :nth-child(5) { grid-column: 1 / -1; }
   .skills-grid > :nth-child(5) .skill-items { grid-template-columns: repeat(4, 1fr); }
 }
+@media (max-width: 380px) {
+  .skill-group { padding: 20px; }
+  .skill-item { padding: 9px 10px; gap: 8px; font-size: .86rem; }
+}
 @media (max-width: 680px) {
-  .skills-grid { grid-template-columns: 1fr; }
+  .skills-grid { grid-template-columns: minmax(0, 1fr); }
   .skills-grid > :nth-child(5) .skill-items { grid-template-columns: repeat(2, 1fr); }
 }
 .skill-group { padding: 26px; }
 .skill-group header { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
 .skill-group h3 { font-size: 1.08rem; }
 .skill-group header p { color: var(--muted); font-size: .86rem; }
-.skill-items { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+.skill-items { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .skill-item {
   display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: 10px; background: var(--bg);
-  font-weight: 600; font-size: .9rem; transition: transform .2s var(--ease), background-color .35s, box-shadow .2s;
+  font-weight: 600; font-size: .9rem; min-width: 0; overflow-wrap: anywhere;
+  transition: transform .2s var(--ease), background-color .35s, box-shadow .2s;
 }
 .skill-item:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 8px 18px -10px var(--c); }
 .logo-badge {
