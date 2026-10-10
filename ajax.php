@@ -1,1 +1,0 @@
-<?php   echo 'welcome'; //json_encode(array('message'=>'')); ?>
