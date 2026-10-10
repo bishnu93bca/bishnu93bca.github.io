@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bishnu Ray — Web Developer</title>
-  <meta name="description" content="Bishnu Ray is a web developer building with Laravel, JavaScript and Tailwind CSS. Skills, projects and contact details.">
-  <meta property="og:title" content="Bishnu Ray — Web Developer">
-  <meta property="og:description" content="Laravel, JavaScript and open source. Skills, projects and contact details.">
+  <title>Bishnu Ray — Senior Software Developer</title>
+  <meta name="description" content="Bishnu Ray is a Senior Software Developer working with Laravel, Zend, CodeIgniter, CakePHP, SocialEngine, WordPress and JavaScript.">
+  <meta property="og:title" content="Bishnu Ray — Senior Software Developer">
+  <meta property="og:description" content="Laravel · Zend · CodeIgniter · CakePHP · SocialEngine · WordPress · JavaScript · Open Source">
   <meta property="og:url" content="https://bishnu93bca.github.io/">
   <meta name="theme-color" content="#0a66c2">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230a66c2'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='700' font-size='28' fill='white'%3EBR%3C/text%3E%3C/svg%3E">
@@ -28,6 +28,7 @@
       --shadow-sm: 0 0 0 1px rgba(0,0,0,.06), 0 2px 4px rgba(0,0,0,.04);
       --shadow-md: 0 0 0 1px rgba(0,0,0,.05), 0 12px 32px -12px rgba(10,40,80,.22);
       --ease: cubic-bezier(.2,.7,.2,1);
+      --grad-cta: linear-gradient(135deg, #0a66c2 0%, #7c3aed 55%, #ec4899 100%);
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -60,9 +61,13 @@
     .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
     .nav-links a { display: block; padding: 8px 14px; border-radius: 999px; font-size: .93rem; font-weight: 500; opacity: .85; transition: opacity .2s, background .2s; }
     .nav-links a:hover { opacity: 1; background: rgba(127,127,127,.14); }
-    .nav-cta { margin-left: 8px; background: var(--blue); color: #fff !important; opacity: 1 !important; }
-    header:not(.scrolled) .nav-cta { background: #fff; color: var(--blue) !important; }
-    .nav-cta:hover { background: var(--blue-dark) !important; color: #fff !important; }
+    .nav-cta {
+      margin-left: 8px; display: inline-flex !important; align-items: center; gap: 6px;
+      background: var(--grad-cta); color: #fff !important; opacity: 1 !important;
+      box-shadow: 0 6px 18px -6px rgba(124,58,237,.6);
+    }
+    .nav-cta svg { width: 16px; height: 16px; }
+    .nav-cta:hover { filter: brightness(1.08); transform: translateY(-1px); }
     .menu-btn { display: none; width: 40px; height: 40px; border-radius: 10px; border: 0; background: rgba(127,127,127,.16); color: inherit; cursor: pointer; place-items: center; }
     .menu-btn svg { width: 20px; height: 20px; }
     @media (max-width: 800px) {
@@ -75,7 +80,7 @@
       .nav-links.open { opacity: 1; transform: none; pointer-events: auto; }
       .nav-links a { padding: 12px 14px; border-radius: 8px; }
       .nav-cta { margin: 4px 0 0; text-align: center; }
-      header:not(.scrolled) .nav-cta { background: var(--blue); color: #fff !important; }
+      .nav-cta { justify-content: center; }
     }
 
     /* ---------- Hero with network canvas ---------- */
@@ -165,10 +170,22 @@
     .highlights { padding: 28px; }
     .highlights ul { list-style: none; display: grid; gap: 16px; }
     .highlights li { display: flex; gap: 14px; align-items: flex-start; }
-    .hi-icon { width: 40px; height: 40px; flex: none; border-radius: 10px; background: var(--blue-soft); color: var(--blue); display: grid; place-items: center; }
+    .hi-icon {
+      width: 40px; height: 40px; flex: none; border-radius: 10px; display: grid; place-items: center;
+      color: #fff; background: var(--ic, linear-gradient(135deg, #0a66c2, #38bdf8));
+      box-shadow: 0 6px 14px -6px var(--ic-shadow, rgba(10,102,194,.6));
+    }
+    .ic-blue   { --ic: linear-gradient(135deg, #0a66c2, #38bdf8); --ic-shadow: rgba(10,102,194,.6); }
+    .ic-red    { --ic: linear-gradient(135deg, #ef4444, #f97316); --ic-shadow: rgba(239,68,68,.55); }
+    .ic-purple { --ic: linear-gradient(135deg, #7c3aed, #c084fc); --ic-shadow: rgba(124,58,237,.55); }
+    .ic-green  { --ic: linear-gradient(135deg, #059669, #34d399); --ic-shadow: rgba(5,150,105,.55); }
+    .ic-amber  { --ic: linear-gradient(135deg, #f59e0b, #fde047); --ic-shadow: rgba(245,158,11,.55); }
+    .ic-pink   { --ic: linear-gradient(135deg, #db2777, #f472b6); --ic-shadow: rgba(219,39,119,.55); }
+    .ic-cyan   { --ic: linear-gradient(135deg, #0891b2, #22d3ee); --ic-shadow: rgba(8,145,178,.55); }
+    .ic-wp     { --ic: linear-gradient(135deg, #21759b, #3ca4d6); --ic-shadow: rgba(33,117,155,.55); }
     .hi-icon svg { width: 20px; height: 20px; }
     .highlights b { display: block; font-size: .97rem; }
-    .highlights span { color: var(--muted); font-size: .9rem; }
+    .highlights div span { color: var(--muted); font-size: .9rem; }
     @media (max-width: 860px) { .about-grid { grid-template-columns: 1fr; } }
 
     /* Skills */
@@ -213,8 +230,27 @@
       display: flex; align-items: center; gap: 14px; padding: 14px 16px; border-radius: 10px; border: 1px solid var(--border);
       font-weight: 600; overflow-wrap: anywhere; transition: border-color .2s, background .2s, transform .2s var(--ease);
     }
-    .contact-list a:hover { border-color: var(--blue); background: var(--blue-soft); transform: translateX(4px); }
-    .contact-list .hi-icon { width: 38px; height: 38px; }
+    .contact-list a:hover { border-color: var(--brand, var(--blue)); background: var(--brand-soft, var(--blue-soft)); transform: translateX(4px); }
+    .contact-list .hi-icon { width: 42px; height: 42px; border-radius: 12px; }
+    .contact-list .arrow { margin-left: auto; width: 18px; height: 18px; color: var(--brand, var(--blue)); flex: none; transition: transform .2s var(--ease); }
+    .contact-list a:hover .arrow { transform: translateX(3px); }
+    .c-mail     { --brand: #ea4335; --brand-soft: #fdecea; --ic: linear-gradient(135deg, #ea4335, #fbbc05); --ic-shadow: rgba(234,67,53,.55); }
+    .c-linkedin { --brand: #0a66c2; --brand-soft: #e8f1fb; --ic: linear-gradient(135deg, #0a66c2, #0ea5e9); --ic-shadow: rgba(10,102,194,.55); }
+    .c-github   { --brand: #6e40c9; --brand-soft: #f3eefe; --ic: linear-gradient(135deg, #24292f, #6e40c9); --ic-shadow: rgba(110,64,201,.5); }
+    .btn-grad { background: var(--grad-cta); color: #fff; box-shadow: 0 10px 24px -10px rgba(124,58,237,.7); }
+    .btn-grad:hover { filter: brightness(1.08); }
+    .contact .actions { margin-top: 24px; }
+
+    /* Tech strip */
+    .tech { padding: 22px 0 0; }
+    .tech-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px;
+      background: var(--surface); box-shadow: var(--shadow-sm); font-weight: 600; font-size: .9rem;
+      transition: transform .2s var(--ease), box-shadow .2s var(--ease);
+    }
+    .chip:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .chip i { width: 10px; height: 10px; border-radius: 50%; background: var(--c); box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 22%, transparent); }
     .contact-list small { display: block; color: var(--muted); font-weight: 500; font-size: .8rem; }
     @media (max-width: 860px) { .contact { grid-template-columns: 1fr; padding: 28px 20px; } }
 
@@ -244,7 +280,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact" class="nav-cta">Contact</a></li>
+        <li><a href="#contact" class="nav-cta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>Contact</a></li>
       </ul>
     </div>
   </header>
@@ -257,7 +293,7 @@
         <div class="hero-inner">
           <span class="pill"><span class="dot"></span> Open to new opportunities</span>
           <h1 id="hero-title">Building reliable web products <span class="accent">that connect people.</span></h1>
-          <p class="lead">I'm Bishnu Ray, a web developer working with Laravel, JavaScript and Tailwind CSS. I build fast, responsive websites, dashboards and web apps, and I contribute to open source.</p>
+          <p class="lead">I'm Bishnu Ray, a Senior Software Developer specialising in PHP frameworks: Laravel, Zend, CodeIgniter and CakePHP. I build social community platforms with SocialEngine, websites with WordPress, and interactive front ends with JavaScript.</p>
           <div class="actions">
             <a href="#projects" class="btn btn-light">
               View my work
@@ -269,7 +305,7 @@
             </a>
           </div>
           <div class="hero-meta">
-            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>Full-stack web development</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>Senior Software Developer</span>
             <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>Available for remote work</span>
           </div>
         </div>
@@ -283,16 +319,32 @@
         <div class="avatar" role="img" aria-label="Bishnu Ray">BR</div>
         <div>
           <h2>Bishnu Ray</h2>
-          <p class="headline">Web Developer · Laravel · JavaScript · Open Source</p>
+          <p class="headline">Senior Software Developer · Laravel · Zend · CodeIgniter · CakePHP · SocialEngine · WordPress · JavaScript · Open Source</p>
           <p class="sub">
             <a href="https://github.com/bishnu93bca" target="_blank" rel="noopener">github.com/bishnu93bca</a>
             <a href="https://linkedin.com/in/bishnuray" target="_blank" rel="noopener">linkedin.com/in/bishnuray</a>
           </p>
         </div>
         <div class="profile-actions">
-          <a href="mailto:bishnu99bca@gmail.com" class="btn btn-primary">Message</a>
+          <a href="mailto:bishnu99bca@gmail.com" class="btn btn-grad">Message</a>
           <a href="https://github.com/bishnu93bca" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
         </div>
+      </div>
+    </div>
+
+    <!-- Tech strip -->
+    <div class="container tech">
+      <div class="tech-row reveal" aria-label="Technologies">
+        <span class="chip"><i style="--c:#ff2d20"></i>Laravel</span>
+        <span class="chip"><i style="--c:#68b04d"></i>Zend</span>
+        <span class="chip"><i style="--c:#dd4814"></i>CodeIgniter</span>
+        <span class="chip"><i style="--c:#d33c43"></i>CakePHP</span>
+        <span class="chip"><i style="--c:#0f8fd6"></i>SocialEngine</span>
+        <span class="chip"><i style="--c:#21759b"></i>WordPress</span>
+        <span class="chip"><i style="--c:#f7df1e"></i>JavaScript</span>
+        <span class="chip"><i style="--c:#777bb3"></i>PHP</span>
+        <span class="chip"><i style="--c:#00758f"></i>MySQL</span>
+        <span class="chip"><i style="--c:#10b981"></i>Open Source</span>
       </div>
     </div>
 
@@ -308,27 +360,27 @@
         <div class="about-grid">
           <div class="card about-text reveal">
             <h3>Summary</h3>
-            <p>I'm a <strong>web developer</strong> who enjoys taking an idea from a rough sketch to a working product. Most of my work uses <strong>Laravel</strong> on the back end and <strong>JavaScript</strong> with <strong>Tailwind CSS</strong> on the front end.</p>
-            <p>I care about responsive layouts that look good on every screen, readable and maintainable code, and dashboards that make data easy to understand at a glance.</p>
-            <p>Outside client work, I contribute to <strong>open-source</strong> projects and keep learning new tools and techniques.</p>
+            <p>I'm a <strong>Senior Software Developer</strong> with deep experience across the PHP ecosystem. I design and build web applications with <strong>Laravel</strong>, <strong>Zend</strong>, <strong>CodeIgniter</strong> and <strong>CakePHP</strong>, choosing the right framework for each project.</p>
+            <p>I also build and customise social community platforms on <strong>SocialEngine</strong>, create and extend <strong>WordPress</strong> sites with custom themes and plugins, and bring interfaces to life with <strong>JavaScript</strong>.</p>
+            <p>I care about clean, maintainable code, solid architecture and responsive design, and I contribute to <strong>open-source</strong> projects.</p>
           </div>
           <div class="card highlights reveal">
             <h3>Highlights</h3>
             <ul>
               <li>
-                <span class="hi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6" rx="2"/><rect x="3" y="14" width="18" height="6" rx="2"/></svg></span>
-                <div><b>Laravel back ends</b><span>APIs, authentication and databases</span></div>
+                <span class="hi-icon ic-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 22V12M21 7l-9 5-9-5"/></svg></span>
+                <div><b>PHP frameworks</b><span>Laravel, Zend, CodeIgniter and CakePHP</span></div>
               </li>
               <li>
-                <span class="hi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></span>
-                <div><b>Responsive by default</b><span>Mobile, tablet and desktop</span></div>
+                <span class="hi-icon ic-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2M16 3.1a4 4 0 0 1 0 7.8M22 21v-2a4 4 0 0 0-3-3.9"/></svg></span>
+                <div><b>Social communities</b><span>Custom SocialEngine platforms</span></div>
               </li>
               <li>
-                <span class="hi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span>
-                <div><b>Data dashboards</b><span>Chart.js and Tailwind CSS</span></div>
+                <span class="hi-icon ic-wp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M4 8l4.5 12L12 10l3.5 10L20 8M3 8h4M10 8h4M17 8h4"/></svg></span>
+                <div><b>WordPress</b><span>Custom themes, plugins and sites</span></div>
               </li>
               <li>
-                <span class="hi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 21V9a9 9 0 0 0 9 9"/></svg></span>
+                <span class="hi-icon ic-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 21V9a9 9 0 0 0 9 9"/></svg></span>
                 <div><b>Open source</b><span>Contributing and sharing code</span></div>
               </li>
             </ul>
@@ -349,28 +401,28 @@
         </div>
         <div class="skills-grid">
           <article class="card skill reveal">
-            <span class="hi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="6" rx="2"/><rect x="3" y="14" width="18" height="6" rx="2"/><path d="M7 7h.01M7 17h.01"/></svg></span>
-            <h3>Back-end development</h3>
-            <p>REST APIs, authentication, databases and business logic with Laravel and PHP.</p>
-            <div class="tags"><span class="tag">Laravel</span><span class="tag">PHP</span><span class="tag">MySQL</span></div>
+            <span class="hi-icon ic-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 22V12M21 7l-9 5-9-5"/></svg></span>
+            <h3>PHP frameworks</h3>
+            <p>Scalable web applications, REST APIs and back-office systems built on the right PHP framework for the job.</p>
+            <div class="tags"><span class="tag">Laravel</span><span class="tag">Zend</span><span class="tag">CodeIgniter</span><span class="tag">CakePHP</span></div>
           </article>
           <article class="card skill reveal">
-            <span class="hi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></span>
+            <span class="hi-icon ic-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v2M16 3.1a4 4 0 0 1 0 7.8M22 21v-2a4 4 0 0 0-3-3.9"/></svg></span>
+            <h3>Social &amp; CMS platforms</h3>
+            <p>Community networks on SocialEngine and content-driven sites on WordPress, with custom plugins and themes.</p>
+            <div class="tags"><span class="tag">SocialEngine</span><span class="tag">WordPress</span><span class="tag">Plugins</span></div>
+          </article>
+          <article class="card skill reveal">
+            <span class="hi-icon ic-amber"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></span>
             <h3>Front-end development</h3>
-            <p>Interactive, accessible interfaces with modern JavaScript and utility-first CSS.</p>
-            <div class="tags"><span class="tag">JavaScript</span><span class="tag">Tailwind CSS</span><span class="tag">HTML5</span></div>
+            <p>Interactive, responsive interfaces that work smoothly on phones, tablets and desktops.</p>
+            <div class="tags"><span class="tag">JavaScript</span><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Tailwind CSS</span></div>
           </article>
           <article class="card skill reveal">
-            <span class="hi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg></span>
-            <h3>Responsive design</h3>
-            <p>Layouts that adapt smoothly from phones and tablets to large desktop screens.</p>
-            <div class="tags"><span class="tag">Mobile-first</span><span class="tag">CSS Grid</span><span class="tag">Flexbox</span></div>
-          </article>
-          <article class="card skill reveal">
-            <span class="hi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span>
-            <h3>Dashboards &amp; data</h3>
-            <p>Admin panels and analytics dashboards with clear, interactive charts.</p>
-            <div class="tags"><span class="tag">Chart.js</span><span class="tag">Tailwind CSS</span></div>
+            <span class="hi-icon ic-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.7 4 3 9 3s9-1.3 9-3V5M3 12c0 1.7 4 3 9 3s9-1.3 9-3"/></svg></span>
+            <h3>Databases &amp; dashboards</h3>
+            <p>Well-designed databases and admin dashboards with clear, interactive charts.</p>
+            <div class="tags"><span class="tag">MySQL</span><span class="tag">Chart.js</span><span class="tag">REST APIs</span></div>
           </article>
         </div>
       </div>
@@ -426,19 +478,22 @@
             <p class="eyebrow">Contact</p>
             <h2>Let's work together.</h2>
             <p>Have a project in mind, a role to discuss, or just want to say hello? I'd love to hear from you.</p>
+            <div class="actions">
+              <a href="mailto:bishnu99bca@gmail.com" class="btn btn-grad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg>Send me an email</a>
+            </div>
           </div>
           <div class="contact-list">
-            <a href="mailto:bishnu99bca@gmail.com">
+            <a href="mailto:bishnu99bca@gmail.com" class="c-mail">
               <span class="hi-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></span>
-              <div><small>Email</small>bishnu99bca@gmail.com</div>
+              <div><small>Email</small>bishnu99bca@gmail.com</div><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
             </a>
-            <a href="https://linkedin.com/in/bishnuray" target="_blank" rel="noopener">
+            <a href="https://linkedin.com/in/bishnuray" target="_blank" rel="noopener" class="c-linkedin">
               <span class="hi-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></span>
-              <div><small>LinkedIn</small>linkedin.com/in/bishnuray</div>
+              <div><small>LinkedIn</small>linkedin.com/in/bishnuray</div><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
             </a>
-            <a href="https://github.com/bishnu93bca" target="_blank" rel="noopener">
+            <a href="https://github.com/bishnu93bca" target="_blank" rel="noopener" class="c-github">
               <span class="hi-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.4c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg></span>
-              <div><small>GitHub</small>github.com/bishnu93bca</div>
+              <div><small>GitHub</small>github.com/bishnu93bca</div><svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
             </a>
           </div>
         </div>
